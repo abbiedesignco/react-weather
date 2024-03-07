@@ -17,7 +17,9 @@ function App() {
         </div>
       </div>
       <footer>
-        Open Source on <a>GitHub</a>, Coded by{" "}
+        Open Source on{" "}
+        <a href="https://github.com/abbiedesignco/react-weather">GitHub</a>,
+        Coded by{" "}
         <a href="www.abbiericher.com" target="_blank">
           Abbie Richer
         </a>{" "}
