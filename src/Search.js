@@ -2,10 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
 import "./App.css";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import Weather from "./Weather";
 
-export default function Weather() {
+export default function Search() {
   return (
     <div>
       <div class="search-bar row">
@@ -16,11 +15,13 @@ export default function Weather() {
             placeholder="Tap a city here..."
             autocomplete="off"
             value=""
+            style={`z-index: 1000 !important`}
           />
           <input type="submit" class="btn btn-primary" value="Search" />
         </form>
         <button class="col-3 btn btn-success">Current</button>
       </div>
+      <Weather />
       <div class="weather-summary">
         <div class="weather-summary-header">
           <h2>Lisbon</h2>
