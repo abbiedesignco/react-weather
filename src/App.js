@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Search from "./Search";
 import Header from "./Header";
+import Weather from "./Weather";
 
 function App() {
   return (
@@ -10,9 +11,8 @@ function App() {
         <div className="Weather-container">
           <Header />
           <div className="Forecast-container">
-            <div>
-              <Search />
-            </div>
+            <Search />
+            <Weather />
           </div>
         </div>
       </div>
