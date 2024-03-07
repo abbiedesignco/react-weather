@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Search from "./Search";
+import Header from "./Header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-container">
+        <div className="Weather-container">
+          <Header />
+          <div className="Forecast-container">
+            <div>
+              <Search />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        Open Source on <a>GitHub</a>, Coded by{" "}
+        <a href="www.abbiericher.com" target="_blank">
+          Abbie Richer
+        </a>{" "}
+      </footer>
     </div>
   );
 }
