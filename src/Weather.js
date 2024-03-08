@@ -1,5 +1,8 @@
 import React from "react";
 import axios from "axios";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function Weather(props) {
   function handleResponse(response) {
@@ -12,21 +15,21 @@ export default function Weather(props) {
   axios.get(apiUrl).then(handleResponse);
 
   return (
-    <div class="weather-summary">
-      <div class="weather-summary-header">
+    <div className="Weather-summary">
+      <Container className="Weather-summary-header">
         <h2>Lisbon</h2>
-        <div class="row weather-details">
-          <div class="col-6">
-            <div class="weather-detail-text">Thursday 13:58</div>
-            <div class="weather-detail-text">Clouds</div>
-            <div class="weather-detail-text">Precipitation: 73%</div>
-            <div class="weather-detail-text">Wind: 13km/h</div>
-          </div>
-          <div class="weather-temp col-6">
+        <Row className="Weather-details">
+          <Col className="Col-6">
+            <div className="Weather-detail-text">Thursday 13:58</div>
+            <div className="Weather-detail-text">Clouds</div>
+            <div className="Weather-detail-text">Precipitation: 73%</div>
+            <div className="Weather-detail-text">Wind: 13km/h</div>
+          </Col>
+          <Col className="Weather-temp Col-6">
             <strong>11</strong>°C
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
